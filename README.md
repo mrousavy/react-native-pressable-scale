@@ -1,7 +1,12 @@
 
 <div align="center">
-  <h2>react-native-pressable-scale</h2>
+  <h2 align="center">react-native-pressable-scale</h2>
+  <pre align="center">
+    <code>npm i react-native-pressable-scale</code>
+  </pre>
+  <a align="center" href="https://npmjs.org/react-native-pressable-scale"><img align="center" src="https://img.shields.io/npm/v/react-native-pressable-scale?color=%237f78d2"></a>
 </div>
+
 
 ### `<PressableScale>`
 
