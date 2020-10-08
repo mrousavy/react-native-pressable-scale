@@ -1,6 +1,6 @@
 
 <div align="center">
-  <h2 align="center">react-native-pressable-scale</h2>
+  <h2 align="center">A Pressable that scales down when pressed.</h2>
   <pre align="center">
     <code>npm i react-native-pressable-scale</code>
   </pre>
