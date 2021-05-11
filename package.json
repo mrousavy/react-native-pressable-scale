@@ -1,11 +1,13 @@
 {
   "name": "react-native-pressable-scale",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A <PressableScale> and a supercharged <NativePressableScale> components for React Native",
   "main": "dist/index",
   "types": "dist/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --noEmit false"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,7 @@
     "button"
   ],
   "author": "mrousavy",
-  "license": "ISC",
+  "license": "MIT",
   "files": [
     "dist"
   ],
@@ -31,17 +33,17 @@
   },
   "homepage": "https://github.com/mrousavy/react-native-pressable-scale#readme",
   "peerDependencies": {
-    "react-native": ">= 0.62",
+    "react-native": ">= 0.63",
     "react": "*",
     "react-native-reanimated": ">= 2",
     "react-native-gesture-handler": "*"
   },
   "devDependencies": {
-    "@types/react-native": "latest",
-    "@types/react": "latest",
+    "@types/react": "^17.0.4",
+    "@types/react-native": "0.64.4",
     "typescript": "^4.0.3",
-    "react-native": "latest",
-    "react": "latest",
+    "react-native": "0.64.0",
+    "react": "17.0.2",
     "react-native-reanimated": "2.0.0-alpha.7",
     "react-native-gesture-handler": "latest"
   }

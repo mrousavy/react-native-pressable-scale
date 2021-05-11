@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { ViewProps } from 'react-native';
+import type { ViewProps } from 'react-native';
 import { TapGestureHandler, TapGestureHandlerGestureEvent } from 'react-native-gesture-handler';
 import Reanimated, { cancelAnimation, delay, useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { PRESSABLE_IN_LIST_DELAY } from './Constants';
