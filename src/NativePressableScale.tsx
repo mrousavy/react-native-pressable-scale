@@ -44,7 +44,7 @@ export interface NativePressableScaleProps extends ViewProps, Partial<Omit<Reani
 /**
  * A Pressable that scales down when pressed. Uses the native responder system from react-native-gesture-handler instead of the JS Pressability API.
  */
-export default function NativePressableScale(props: NativePressableScaleProps): React.ReactElement {
+export function NativePressableScale(props: NativePressableScaleProps): React.ReactElement {
 	const {
 		activeScale = 0.95,
 		isInList,

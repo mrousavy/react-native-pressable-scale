@@ -22,7 +22,7 @@ const ReanimatedTouchableWithoutFeedback = Reanimated.createAnimatedComponent(To
 /**
  * A Pressable that scales down when pressed. Uses the JS Pressability API.
  */
-export default function PressableScale(props: PressableScaleProps): React.ReactElement {
+export function PressableScale(props: PressableScaleProps): React.ReactElement {
 	const {
 		activeScale = 0.95,
 		weight = 'heavy',
