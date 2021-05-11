@@ -4,7 +4,7 @@ import { TapGestureHandler, TapGestureHandlerGestureEvent } from 'react-native-g
 import Reanimated, { cancelAnimation, delay, useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { PRESSABLE_IN_LIST_DELAY } from './Constants';
 
-export interface PressableScaleProps extends ViewProps, Partial<Omit<Reanimated.WithSpringConfig, 'mass'>> {
+export interface NativePressableScaleProps extends ViewProps, Partial<Omit<Reanimated.WithSpringConfig, 'mass'>> {
 	children: React.ReactNode;
 	/**
 	 * The value to scale to when the Pressable is being pressed.
@@ -44,7 +44,7 @@ export interface PressableScaleProps extends ViewProps, Partial<Omit<Reanimated.
 /**
  * A Pressable that scales down when pressed. Uses the native responder system from react-native-gesture-handler instead of the JS Pressability API.
  */
-export default function NativePressableScale(props: PressableScaleProps): React.ReactElement {
+export default function NativePressableScale(props: NativePressableScaleProps): React.ReactElement {
 	const {
 		activeScale = 0.95,
 		isInList,
