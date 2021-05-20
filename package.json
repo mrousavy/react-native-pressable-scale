@@ -1,6 +1,6 @@
 {
   "name": "react-native-pressable-scale",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A <PressableScale> and a supercharged <NativePressableScale> components for React Native",
   "main": "dist/index",
   "types": "dist/index.d.ts",
