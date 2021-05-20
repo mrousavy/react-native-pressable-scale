@@ -26,7 +26,8 @@
   "author": "mrousavy",
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "bugs": {
     "url": "https://github.com/mrousavy/react-native-pressable-scale/issues"
