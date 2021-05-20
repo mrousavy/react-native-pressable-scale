@@ -5,6 +5,11 @@
     <code>npm i react-native-pressable-scale</code>
   </pre>
   <a align="center" href="https://npmjs.org/react-native-pressable-scale"><img align="center" src="https://img.shields.io/npm/v/react-native-pressable-scale?color=%237f78d2"></a>
+  <br />
+  <br />
+
+  <img src="img/scale.gif" width="35%">
+  <br />
 </div>
 
 
