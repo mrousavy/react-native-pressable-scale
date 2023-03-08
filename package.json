@@ -34,18 +34,18 @@
   },
   "homepage": "https://github.com/mrousavy/react-native-pressable-scale#readme",
   "peerDependencies": {
-    "react-native": ">= 0.63",
     "react": "*",
-    "react-native-reanimated": ">= 2",
-    "react-native-gesture-handler": "*"
+    "react-native": ">= 0.63",
+    "react-native-gesture-handler": "*",
+    "react-native-reanimated": ">= 2"
   },
   "devDependencies": {
-    "@types/react": "^17.0.4",
-    "@types/react-native": "0.64.4",
-    "typescript": "^4.0.3",
-    "react-native": "0.64.0",
-    "react": "17.0.2",
-    "react-native-reanimated": "2.0.0-alpha.7",
-    "react-native-gesture-handler": "latest"
+    "@types/react": "^18.0.28",
+    "@types/react-native": "0.71.3",
+    "react": "18.2.0",
+    "react-native": "0.71.4",
+    "react-native-gesture-handler": "latest",
+    "react-native-reanimated": "3.0.2",
+    "typescript": "^4.0.3"
   }
 }

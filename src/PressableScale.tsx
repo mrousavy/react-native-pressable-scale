@@ -1,8 +1,8 @@
 import React, { useCallback, useMemo } from 'react';
 import { GestureResponderEvent, TouchableWithoutFeedbackProps, TouchableWithoutFeedback, View } from 'react-native';
-import Reanimated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
+import Reanimated, { useAnimatedStyle, useSharedValue, withSpring, WithSpringConfig } from 'react-native-reanimated';
 
-export interface PressableScaleProps extends TouchableWithoutFeedbackProps, Partial<Omit<Reanimated.WithSpringConfig, 'mass'>> {
+export interface PressableScaleProps extends TouchableWithoutFeedbackProps, Partial<Omit<WithSpringConfig, 'mass'>> {
 	children: React.ReactNode;
 	/**
 	 * The value to scale to when the Pressable is being pressed.
@@ -53,7 +53,7 @@ export function PressableScale(props: PressableScaleProps): React.ReactElement {
 
 	const isPressedIn = useSharedValue(false);
 
-	const springConfig = useMemo<Reanimated.WithSpringConfig>(
+	const springConfig = useMemo<WithSpringConfig>(
 		() => ({
 			damping,
 			mass,

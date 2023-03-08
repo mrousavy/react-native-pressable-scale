@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
 import type { ViewProps } from 'react-native';
 import { TapGestureHandler, TapGestureHandlerGestureEvent } from 'react-native-gesture-handler';
-import Reanimated, { cancelAnimation, delay, useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
+import Reanimated, { cancelAnimation, withDelay, useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring, WithSpringConfig } from 'react-native-reanimated';
 import { PRESSABLE_IN_LIST_DELAY } from './Constants';
 
-export interface NativePressableScaleProps extends ViewProps, Partial<Omit<Reanimated.WithSpringConfig, 'mass'>> {
+export interface NativePressableScaleProps extends ViewProps, Partial<Omit<WithSpringConfig, 'mass'>> {
 	children: React.ReactNode;
 	/**
 	 * The value to scale to when the Pressable is being pressed.
@@ -74,7 +74,7 @@ export function NativePressableScale(props: NativePressableScaleProps): React.Re
 	}, [weight]);
 
 	const scale = useSharedValue(1);
-	const springConfig = useMemo<Reanimated.WithSpringConfig>(
+	const springConfig = useMemo<WithSpringConfig>(
 		() => ({
 			damping,
 			mass,
@@ -91,7 +91,7 @@ export function NativePressableScale(props: NativePressableScaleProps): React.Re
 		{
 			onStart: () => {
 				cancelAnimation(scale);
-				scale.value = isInList ? delay(PRESSABLE_IN_LIST_DELAY, withSpring(activeScale, springConfig)) : withSpring(activeScale, springConfig);
+				scale.value = isInList ? withDelay(PRESSABLE_IN_LIST_DELAY, withSpring(activeScale, springConfig)) : withSpring(activeScale, springConfig);
 			},
 			onEnd: () => {
 				onPress();
