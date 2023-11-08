@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import type { ViewProps } from 'react-native';
 import { TapGestureHandler, TapGestureHandlerGestureEvent } from 'react-native-gesture-handler';
-import Reanimated, { cancelAnimation, withDelay, useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring, WithSpringConfig } from 'react-native-reanimated';
+import Reanimated, { cancelAnimation, runOnJS, withDelay, useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring, WithSpringConfig } from 'react-native-reanimated';
 import { PRESSABLE_IN_LIST_DELAY } from './Constants';
 
 export interface NativePressableScaleProps extends ViewProps, Partial<Omit<WithSpringConfig, 'mass'>> {
@@ -94,7 +94,7 @@ export function NativePressableScale(props: NativePressableScaleProps): React.Re
 				scale.value = isInList ? withDelay(PRESSABLE_IN_LIST_DELAY, withSpring(activeScale, springConfig)) : withSpring(activeScale, springConfig);
 			},
 			onEnd: () => {
-				onPress();
+				runOnJS(onPress)();
 			},
 			onFinish: () => {
 				cancelAnimation(scale);
